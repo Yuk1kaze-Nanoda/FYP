@@ -1,0 +1,1 @@
+..\obj\ec600s.o: ..\HARDWARE\EC600S\EC600S.c

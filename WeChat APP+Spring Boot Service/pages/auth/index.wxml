@@ -1,0 +1,37 @@
+<view class="auth-page">
+  <view class="auth-title">Smart Home</view>
+  <view class="auth-subtitle">{{mode === 'login' ? 'Login to control devices and log data' : 'Register first, then login'}}</view>
+
+  <van-field
+    value="{{phone}}"
+    label="Phone"
+    placeholder="Enter 11-digit phone"
+    type="number"
+    maxlength="11"
+    bind:change="onPhoneChange"
+  />
+
+  <van-field
+    value="{{password}}"
+    label="Password"
+    placeholder="At least 6 characters"
+    password
+    maxlength="64"
+    bind:change="onPasswordChange"
+  />
+
+  <view class="auth-actions">
+    <van-button
+      type="primary"
+      block
+      loading="{{loading}}"
+      bind:click="onSubmit"
+    >
+      {{mode === 'login' ? 'Login' : 'Register'}}
+    </van-button>
+  </view>
+
+  <view class="auth-switch" bindtap="toggleMode">
+    {{mode === 'login' ? 'No account? Register' : 'Already have an account? Login'}}
+  </view>
+</view>

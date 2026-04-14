@@ -1,0 +1,34 @@
+page {
+  background: #f7f8fa;
+}
+
+.auth-page {
+  padding: 20px 16px;
+}
+
+.auth-title {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 8px;
+  color: #323233;
+}
+
+.auth-subtitle {
+  text-align: center;
+  color: #969799;
+  font-size: 13px;
+  margin-bottom: 24px;
+}
+
+.auth-actions {
+  margin-top: 24px;
+}
+
+.auth-switch {
+  margin-top: 18px;
+  text-align: center;
+  color: #1989fa;
+  font-size: 14px;
+}

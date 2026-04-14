@@ -1,0 +1,36 @@
+<!-- index.wxml -->
+<view>
+  <view class="van-hairline--surround title">Smart Home</view>
+  <view class="userBar">
+    <text>User: {{userPhone || 'Unknown'}}</text>
+    <van-button size="small" type="danger" bind:click="logout">Logout</van-button>
+  </view>
+
+  <van-cell-group>
+    <van-cell title="Device Status" value="{{device_status}}" />
+  </van-cell-group>
+
+  <view class="dataTime">Upload Time: {{dataTime}}</view>
+
+  <view class="wendu">
+    <van-row style="text-align:center;">
+      <van-col span="12">Temperature: {{wendu}}</van-col>
+      <van-col span="12">Humidity: {{shidu}}</van-col>
+    </van-row>
+  </view>
+
+  <view class="wendu" style="margin-top:10px;">
+    <van-row style="text-align:center;">
+      <van-col span="12">Air: {{air}}</van-col>
+      <van-col span="12">Brightness: {{light}}</van-col>
+    </van-row>
+  </view>
+
+  <view style="margin: 20px 16px; display: flex; flex-wrap: wrap; justify-content: space-between;">
+    <van-button type="primary" style="width: 48%; margin-bottom: 10px;" bind:click="sendKey" data-key="key1">Light On</van-button>
+    <van-button type="primary" style="width: 48%; margin-bottom: 10px;" bind:click="sendKey" data-key="key2">Fan Toggle</van-button>
+    <van-button type="primary" style="width: 48%; margin-bottom: 10px;" bind:click="sendKey" data-key="key3">Curtain Open</van-button>
+    <van-button type="primary" style="width: 48%; margin-bottom: 10px;" bind:click="sendKey" data-key="key4">Curtain Close</van-button>
+    <van-button type="primary" style="width: 48%; margin: 0 auto;" bind:click="sendKey" data-key="key5">Mode Switch</van-button>
+  </view>
+</view>
